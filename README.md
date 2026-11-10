@@ -43,6 +43,7 @@
 
 - Discord：<https://discord.gg/YtvJrFvcC5>
 - 问题反馈：<https://github.com/SoloHomie/BallsHackPro-Public/issues>
+- 赞助支持：<https://ifdian.net/a/SoloHomie>
 
 ---
 
