@@ -2,8 +2,8 @@
 
 **BallsHackPro** 是面向球宝的 Windows 桌面辅助工具：锁定目标、流畅合球、精准调控，游戏体验全面升级。
 
-- 🌐 官网：<https://solohomie.top>
-- 💬 Discord：<https://discord.gg/YtvJrFvcC5>
+- 官网：<https://solohomie.top>
+- Discord：<https://discord.gg/YtvJrFvcC5>
 
 ## 系统要求
 
