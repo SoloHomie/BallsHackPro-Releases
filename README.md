@@ -1,68 +1,51 @@
-# BallsHackPro · 官方下载
+# BallsHackPro · 发行版
 
-**BallsHackPro** 是面向球宝的 Windows 桌面辅助工具：锁定目标、流畅合球、精准调控，游戏体验全面升级�?
+BallsHackPro 是一款面向 **MuMu 模拟器 12** 的球球大作战辅助客户端（Windows）。
 
-- 官网�?https://solohomie.top>
-- Discord�?https://discord.gg/YtvJrFvcC5>
+- 官网与文档：<https://solohomie.top>
+- Discord：<https://discord.gg/YtvJrFvcC5>
+
+本仓库只存放**发行版安装包与更新说明**，源代码不公开。
 
 ## 系统要求
 
 | 项目 | 要求 |
-|---|---|
-| 系统 | Windows 10 / 11�?4 位） |
-| 运行环境 | MuMu 模拟器（前台运行，工具才生效�?|
-| 权限 | 建议以管理员身份运行 |
+| --- | --- |
+| 操作系统 | Windows 10 / 11 64 位 |
+| 模拟器 | MuMu 模拟器 12（`MuMuVMMHeadless.exe` / `MuMuNxDevice.exe`） |
+| 分辨率 | 横屏 16:9，建议 `1920x1080` |
+| 运行权限 | 普通用户即可；部分环境需管理员权限才能读取进程 |
 
-## 下载与安�?
+## 下载与安装
 
-1. 打开 [Releases](https://github.com/SoloHomie/BallsHackPro-Releases/releases) 页面
-2. 下载最新版本的 **启动�?*（约 26 MB�?
-3. 运行安装包，按提示完成安�?
-4. 首次启动会自动下载完整客户端文件，请保持网络畅�?
+1. 从 [Releases](../../releases) 下载最新安装包，或访问官网「下载与安装」页面
+2. 关闭游戏与模拟器后运行安装包
+3. 启动客户端 → 登录 → 先进入对局，再点「重新检测」连接模拟器
 
-> 更早的版本可�?Releases 里翻历史记录；建议始终使用最新版�?
+安装与连接细节见文档：<https://solohomie.top/manual/newbie.html>
 
-## 使用要点
+## 自动更新
 
-- 工具只在 MuMu 模拟器处�?*前台**时生效，切到其他窗口即可正常打字
-- 登录后在软件内完成订�?/ 兑换码开�?
-- 支持自动更新：新版本发布后客户端会提示，可静默更�?
+客户端内置自动更新，流程为：
 
-## 常见问题
+1. 启动时请求 `version.json`
+2. 下载安装包并校验 **SHA-256**
+3. 校验 **RSA 签名**（签名不匹配会直接拒绝）
+4. 后台安装，下次启动生效
 
-**打不开 / 闪退�?*
-请确�?Windows �?64 位、已安装最新启动器，并尝试以管理员身份运行；如仍无法启动，请到 Discord 反馈�?
+任一环节失败都不会影响当前版本使用，详情会写入错误中心（`Ctrl+Shift+E` 可复制）。
 
-**杀毒软件报毒？**
-游戏辅助类工具常被误报。可先添加信任目录；如不放心，请在沙箱环境或备用机运行，风险自担�?
+## 反馈问题
 
-**订阅 / 兑换码问题？**
-在软件内对应页面操作，或�?Discord 咨询管理员�?
+提交问题时请附上：
 
-## 反馈
+- 客户端版本（主界面右下角）
+- 系统版本（`winver`）
+- 日志目录 `logs\`（整个文件夹）
+- 错误中心复制出的完整内容（`Ctrl+Shift+E`）
 
-- Discord�?https://discord.gg/YtvJrFvcC5>
-- 问题反馈�?https://github.com/SoloHomie/BallsHackPro-Public/issues>
-- 赞助支持�?https://ifdian.net/a/SoloHomie>
+常见问题先查：<https://solohomie.top/manual/faq.html>
 
----
+## 说明
 
-## 维护者：发布流程
-
-仅面向维护者，普通用户可忽略�?
-
-- 版本号：`vX.Y.Z`，与客户�?`version.json` �?`latest_version` 对齐
-- 产物命名：启动器 `BallsHackPro-vX.Y.Z-setup.exe`、全量包 `latest_full.zip`、增量清�?`manifest.json`
-
-```bash
-git tag v1.0.0 && git push origin v1.0.0
-gh release create v1.0.0 ./BallsHackPro-v1.0.0-setup.exe \
-  --title "v1.0.0" --notes "更新说明..."
-```
-
-客户端通过 `https://api.solohomie.top/api/version` 检查更新，�?`version.json` �?`latest_version` / `min_version` 决定提示或强制更新；下载源默认走服务�?`/api/download`，也可改为本仓库 Release 直链�?
-
-## 关联仓库
-
-- 客户端源码：[SoloHomie/BallsHackPro](https://github.com/SoloHomie/BallsHackPro)
-- 服务端源码：[SoloHomie/BallsHackProService](https://github.com/SoloHomie/BallsHackProService)
+本工具仅供学习与交流使用。使用前请确认你所在环境的相关规定，因使用本工具产生的一切后果由使用者自行承担。
